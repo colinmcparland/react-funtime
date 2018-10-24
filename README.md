@@ -3,12 +3,12 @@
 * TODO: To deploy to prod, first `build` then `ssh-deploy` the build folder to Apache
 
 # Things to add
-~~* React Hot Loader~~
+* ~~React Hot Loader~~
 * Logging with `bunyan`
 * Testing with `jest`
 * JWT user authentication
 * React context API in lieu of `redux`
-~~* Webpack notifications for build completion~~
+* ~~Webpack notifications for build completion~~
 
 # API Requests
 API requests will be done using `axios`
