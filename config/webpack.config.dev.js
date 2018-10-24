@@ -13,6 +13,7 @@ const getClientEnvironment = require('./env');
 const paths = require('./paths');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
+const WebpackNotifierPlugin = require('webpack-notifier');
 
 
 // Webpack uses `publicPath` to determine where the app is being served from.
@@ -379,6 +380,12 @@ module.exports = {
     new ManifestPlugin({
       fileName: 'asset-manifest.json',
       publicPath: publicPath,
+    }),
+    //  Add a plugin to show a notification once webpack build is done
+    new WebpackNotifierPlugin({
+      excludeWarnings: true,
+      title: 'Build Complete!',
+      contentImage: 'http://i.imgur.com/vNv3Q9p.png'
     }),
   ],
 
